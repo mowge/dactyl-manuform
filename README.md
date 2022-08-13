@@ -1,3 +1,20 @@
+# BOM
+
+| **Part**         	| **Status**               	|
+|------------------	|--------------------------	|
+| Microcontrollers 	| Ordered From Aliexpress  	|
+| Case             	| Not generated or printed 	|
+| Cables           	| Received from Amazon      |
+| Diodes           	| Received from Amazon      |
+| M3 Inserts       	| Received from Amazon      |
+| TRRS Connectors  	| Ordered from Aliexpress  	|
+| HS Sockets      	| Ordered from Aliexpress  	|
+| Switches Brown    | received from Reichelt    |
+| Key caps         	| Ordered from Oh Keycaps  	|
+| TRRS cable       	| Not ordered              	|
+| Reset Buttons    	| Not ordered              	|
+| Hot glue sticks  	| Not ordered              	|
+
 # The Dactyl-ManuForm Keyboard - Python 3 - Cadquery
 This is a fork of [Dactyl-Manuform](https://github.com/tshort/dactyl-keyboard) by Tom Short, which itself is a fork of [Dactyl](https://github.com/adereth/dactyl-keyboard) by Matthew Adereth, a parameterized, split-hand, concave, columnar, ergonomic keyboard.
 
