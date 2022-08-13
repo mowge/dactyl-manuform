@@ -9,5 +9,6 @@ dependencies:
   - pip
   - numpy
   - scipy
+  - nptyping=1.4.4
   - pip:
     - solidpython
