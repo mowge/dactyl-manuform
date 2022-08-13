@@ -284,7 +284,7 @@ function imageExists() {
 
 function buildImage() {
   inform "Building docker image: $imageName..."
-  docker build -t dactyl-keyboard -f docker/Dockerfile .
+  docker build --format=docker -t dactyl-keyboard -f docker/Dockerfile .
 }
 
 function promptBuildImageIfNotExists() {
