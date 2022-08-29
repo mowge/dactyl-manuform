@@ -10,7 +10,7 @@ r2d = 180 / pi
 
 shape_config = {
 
-    'ENGINE': 'solid',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
+    'ENGINE': 'cadquery',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
     # 'ENGINE': 'cadquery',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
 
 
@@ -19,9 +19,9 @@ shape_config = {
     ######################
 
     'save_dir': '.',
-    'config_name':  "DM",
+    'config_name':  "DM_HS_NOTCH",
 
-    'show_caps': 'MX',
+    'show_caps': False,
     'show_pcbs': False, #only runs if caps are shown, easist place to initially inject geometry
 
     'nrows':  5, #5,  # key rows
@@ -63,7 +63,7 @@ shape_config = {
 
     # 'DEFAULT' 6-key, 'MINI' 5-key, 'CARBONFET' 6-key, 'MINIDOX' 3-key, 'TRACKBALL_ORBYL', 'TRACKBALL_CJ'
     'thumb_style': 'DEFAULT',
-    'default_1U_cluster': True, # only used with default, makes top right thumb cluster key 1U
+    'default_1U_cluster': False, # only used with default, makes top right thumb cluster key 1U
     # Thumb key size.  May need slight oversizing, check w/ caps.  Additional spacing will be automatically added for larger keys.
     'minidox_Usize': 1.6,
     # Thumb plate rotations, anything other than 90 degree increments WILL NOT WORK.
@@ -236,7 +236,9 @@ shape_config = {
     # 'HS_UNDERCUT' = hot swap underside with undercut. Does not generate properly.  Hot swap step needs to be modified.
     # 'HS_NOTCH' = hot swap underside with notch.  Does not generate properly.  Hot swap step needs to be modified.
     # 'plate_style':  'NUB',
-    'plate_style': 'NOTCH',
+
+    # Need to experiment with this
+    'plate_style': 'HS_NOTCH',
 
     'hole_keyswitch_height':  14.0,
     'hole_keyswitch_width':  14.0,
@@ -244,8 +246,13 @@ shape_config = {
     'nub_keyswitch_height':  14.4,
     'nub_keyswitch_width':  14.4,
 
-    'undercut_keyswitch_height':  14.0,
-    'undercut_keyswitch_width':  14.0,
+    # Need to adjust these values for good fit.
+    # 14.0 = too small
+    # 14.2 = ????
+    # 14.5 = too big
+    'undercut_keyswitch_height':  14.3, # Original 14. 14.5 is a tad too big
+    'undercut_keyswitch_width':  14.2, # Original 14. 14.5 is a tad too big
+
     'notch_width': 6.0, # If using notch, it is identical to undecut, but only locally by the switch clip
 
     'sa_profile_key_height':  12.7,
@@ -273,7 +280,7 @@ shape_config = {
     # 'SLIDING' = Features to slide the OLED in place and use a pin or block to secure from underneath.
     # 'CLIP' = Features to set the OLED in a frame a snap a bezel down to hold it in place.
 
-    'oled_mount_type':  'CLIP',
+    'oled_mount_type':  'NONE',
     'oled_center_row': 1.25, # if not None, this will override the oled_mount_location_xyz and oled_mount_rotation_xyz settings
     'oled_translation_offset': (0, 0, 4), # Z offset tweaks are expected depending on curvature and OLED mount choice.
     'oled_rotation_offset': (0, 0, 0),
